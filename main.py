@@ -1,7 +1,6 @@
-import ctypes
 import datetime
 import os
-from ctypes import windll
+import ctypes
 
 
 def get_full_path_of_image(image_filename):
@@ -11,7 +10,7 @@ def get_full_path_of_image(image_filename):
 def set_as_wallpaper(path):
     SPI = 20
     SPIF = 2
-    return windll.user32.SystemParametersInfoA(SPI, 0, path.encode("us-ascii"), SPIF)
+    return ctypes.windll.user32.SystemParametersInfoA(SPI, 0, path.encode("us-ascii"), SPIF)
 
 
 li = [
