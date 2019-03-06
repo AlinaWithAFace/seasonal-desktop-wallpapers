@@ -9,7 +9,7 @@ def get_full_path_of_image(image_filename):
 
 def set_as_wallpaper(path):
     SPI = 20
-    SPIF = 2
+    SPIF = 3
     return ctypes.windll.user32.SystemParametersInfoA(SPI, 0, path.encode("us-ascii"), SPIF)
 
 
